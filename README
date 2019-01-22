@@ -1,0 +1,157 @@
+Question 1
+Let's assume I've got my Scanner object setup as shown below.
+import java.util.Scanner;
+
+public class Example {
+
+    public void getInput() {
+        Scanner s = new Scanner(System.in);
+
+        // read user input (first and last name, then age)
+        // TODO
+
+        // print user input to the console
+        System.out.println("Hello, " + name ". You're " + age + " years old.");
+        s.close();
+    }
+}
+Given the text printed to the console and the implied data types, which methods of the Scanner class should I use and how do I use them?
+Correct Answer:
+String name = s.nextLine();
+int age = s.nextInt();
+This is correct because the string is set equal to getString, this stores the user input and returns it as a string using s.nextInt().
+
+Question 3
+Consider the following method definition.
+public int add(int x, int y) {
+    return x + y;
+}
+Assuming I've created an object of the class in which this method is defined called test, how can I use this method to compute and 
+store the sum of two integers?
+Correct Answer
+int sum = test.add(123, 456);
+This is correct as it fulfills the requirements of the syntax and runs with no errors.
+
+Question 4
+Consider the following code snippet.
+String str = "Hello, there. My name is Joseph. What's yours?";
+char c = str.charAt(7);
+What is the value of c after running this code?
+Correct Answer:
+'t'
+This is correct because 7 spaces from the beginning of the string is the letter "t".
+
+Question 5
+Consider the following requirements for a method I need to write.
+
+Accepts a single parameter
+If that parameter is a whole number, return the parameter unchanged.
+If that parameter contains a fractional component, return the next largest whole number.
+Here's my method definition.
+
+public double mystery(double x) {
+
+}
+You Answered:
+This can't be done with a single line of code. 
+Correct!
+return Math.ceil(x);
+I accidentally clicked the other option when it only asked for a single line of code, so technically it was half right whereas it
+should've been correct.
+
+Question 6
+I want to read in some information from the user (i.e., by having him or her type things on the keyboard). I know I need to use the 
+Scanner class, but I'm not sure how to create an object of that class.
+
+Here's what I have so far...
+
+import java.util.Scanner;
+
+public class Example {
+
+    public void getInput() {
+
+    }
+}
+Assuming I will only need to use the Scanner in the getInput method, how should I create an object from the Scanner class to use?
+Correct Answer:
+Scanner input = new Scanner(System.in);
+
+Question 8
+Which of the following are valid access modifiers for methods in Java? Select all that apply.
+Correct!
+  protected 
+Correct!
+  default 
+Correct!
+  public 
+Correct!
+  private
+ These answers are correct because they all are valid access modifiers for methods in Java.
+ 
+ Question 9
+Match the access modifier with its visibility.
+Correct!
+public - Visible by all classes.
+private - Correct Answer visible only within the class in which it's defined
+default - Correct Answer visible within the class in which it's defined, as well as by classes within the same package
+protected - Correct Answer visible within the class in which it's defined, by classes within the same package, and by subclasses of the 
+class in which it's defined
+
+Question 10
+Consider the following method definition.
+
+public long multiply(int a, int b, int c) {
+
+}
+Modify the following method definition so that it accepts three integers in the form of parameters, computes their product, and prints 
+it to the console. The method should not return a value.
+Correct Answer:
+public void multiply(int a, int b, int c) {
+    System.out.println(a * b * c);
+}
+This is correct because it accepts the 3 integers and does not need to return anything. The other answers are wrong because the method 
+either isn’t void, meaning that it must return a value, or doesn’t print out the answer.
+
+Question 11
+Consider the following lines of code,
+
+String s = "abcdefg";
+String sub1 = s.substring(s.indexOf("c"));
+String sub2 = s.substring(s.indexOf("e"), s.indexOf("g"));
+What are the values of sub1 and sub2 after running this code?
+Correct Answer:
+cdefg and ef
+This is correct because once the code has been run it breaks down the string and produces the results shown.
+
+Question 13
+When writing a method, you must always include a(n) static identifier , a(n) class definition symbol , and the method name (in that 
+order). Together, this is known as the method's method identifier .
+Correct Answer
+access modifier
+return type
+method signature
+These are correct because becuase the other options don't exist.
+
+Question 14
+I want to print each character of a String one-by-one on a separate line. The number of characters in the String is unknown. You may 
+assume the String is stored in a variable called str. How can I do this? Select all that apply.
+Correct!
+for (int i = 0; i < str.length(); i++) {
+    System.out.println(str.charAt(i));
+}
+This is the only correct answer as it is the only string of code that is sufficient for the problem at hand.
+
+Question 15
+Consider the following method definition.
+
+public double randomNumber(int seed) {
+    if (seed > 1000) {
+        return Math.random() * seed;
+    } else if (seed > 500) { 
+        return Math.random() * seed * -1;
+    }
+}
+I keep getting an error message telling me that my method must return a value of type double. What's wrong with my code?
+This question didn't display any correct answer on Canvas. I assume the answer is 
+For seed values less than or equal to 500, the method does not return a value.
